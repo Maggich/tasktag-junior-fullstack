@@ -4,6 +4,7 @@ venv/
 __pycache__/
 *.py[cod]
 *.sqlite3
+*.tsbuildinfo
 staticfiles/
 media/
 node_modules/
