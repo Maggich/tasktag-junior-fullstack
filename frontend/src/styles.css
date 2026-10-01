@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #172033;
+  background: #f4f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 75% -10%, rgba(215, 226, 255, .72), transparent 34rem),
+    #f4f6fb;
+}
+
+.page-shell { min-height: 100vh; }
+
+.topbar {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 max(32px, calc((100vw - 1120px) / 2));
+  border-bottom: 1px solid #e9edf5;
+  background: rgba(255, 255, 255, .78);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #202c45;
+  font: 800 19px "Manrope", sans-serif;
+  text-decoration: none;
+  letter-spacing: -.7px;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: white;
+  background: linear-gradient(135deg, #6257e8, #9889ff);
+  font-size: 16px;
+}
+
+.workspace-label { color: #8992a5; font-size: 13px; }
+.avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  border-radius: 50%;
+  color: #5145c7;
+  background: #e9e6ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.content { max-width: 920px; margin: 0 auto; padding: 68px 28px 72px; }
+.intro { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.eyebrow { margin: 0 0 13px; color: #7267d8; font-size: 10px; font-weight: 700; letter-spacing: 1.45px; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 10px; font: 800 36px "Manrope", sans-serif; letter-spacing: -1.5px; }
+.subtitle { margin-bottom: 0; color: #858da0; font-size: 14px; }
+.task-count { padding-bottom: 5px; color: #8a92a3; font-size: 12px; }
+.task-count span { color: #4d45b5; font-weight: 700; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin: 48px 0 16px; }
+.section-heading h2 { margin: 0; font: 700 16px "Manrope", sans-serif; }
+.section-note { color: #9aa1b0; font-size: 12px; }
+.task-list { display: grid; gap: 10px; }
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 92px;
+  padding: 18px 21px;
+  border: 1px solid #eaedf4;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 4px 16px rgba(30, 42, 74, .025);
+  transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.task-card:hover { transform: translateY(-1px); border-color: #d9d5ff; box-shadow: 0 8px 22px rgba(54, 48, 120, .06); }
+.task-check {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #8b83da;
+  background: #f1efff;
+  font-size: 10px;
+  font-weight: 700;
+}
+.task-copy { min-width: 0; flex: 1; }
+.task-copy h3 { margin: 0 0 5px; color: #27324a; font-size: 13px; font-weight: 700; }
+.task-copy p { margin: 0; overflow: hidden; color: #9299a8; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.task-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.tag-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px; border-radius: 20px; color: #555e70; background: #f5f6fa; font-size: 10px; font-weight: 600; }
+.tag-dot { width: 6px; height: 6px; border-radius: 50%; }
+.no-tag { color: #a1a7b3; font-size: 10px; }
+.task-date { color: #a1a7b3; font-size: 10px; }
+.tag-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tag-legend-label { margin-right: 4px; color: #a0a6b3; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.notice { padding: 18px; border: 1px solid #eaedf4; border-radius: 12px; color: #717b8e; background: white; font-size: 13px; }
+.notice-error { border-color: #f0cbcb; color: #ad3f3f; }
+.challenge { display: flex; gap: 13px; margin-top: 25px; padding: 18px 20px; border: 1px solid #e7e4ff; border-radius: 12px; background: #f8f7ff; }
+.challenge-icon { color: #7568da; font-size: 18px; }
+.challenge strong { color: #5148a6; font-size: 12px; }
+.challenge p { margin: 5px 0 0; color: #8581a8; font-size: 12px; line-height: 1.6; }
+.challenge code { color: #5d55ad; font-size: 11px; }
+
+@media (max-width: 640px) {
+  .topbar { gap: 14px; padding: 0 18px; }
+  .workspace-label { overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+  .content { padding: 44px 18px 54px; }
+  .intro { align-items: flex-start; flex-direction: column; }
+  h1 { font-size: 30px; }
+  .section-heading { margin-top: 36px; }
+  .task-card { align-items: flex-start; gap: 11px; padding: 15px; }
+  .task-copy p { max-width: 42vw; }
+  .task-meta { min-width: 70px; }
+}
